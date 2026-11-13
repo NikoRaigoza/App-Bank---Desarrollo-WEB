@@ -1,0 +1,77 @@
+:root {
+  /* Superficies */
+  --bg: #0b0a14;
+  --bg-elevated: #12111f;
+  --surface: #161428;
+  --surface-2: #1d1a33;
+  --surface-3: #252142;
+  --border: rgb(167 139 250 / 12%);
+  --border-strong: rgb(167 139 250 / 24%);
+
+  /* Texto */
+  --text-h: #f3f1ff;
+  --text: #b9b4d6;
+  --text-muted: #8a84ad;
+  --text-faint: #625d84;
+
+  /* Marca */
+  --violet: #8b5cf6;
+  --violet-soft: #a78bfa;
+  --indigo: #6366f1;
+  --blue: #3b82f6;
+  --cyan: #38bdf8;
+  --gradient: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #2563eb 100%);
+  --gradient-text: linear-gradient(90deg, #c4b5fd, #93c5fd);
+
+  /* Estados */
+  --success: #34d399;
+  --success-bg: rgb(52 211 153 / 12%);
+  --danger: #fb7185;
+  --danger-bg: rgb(251 113 133 / 12%);
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 20px 50px -20px rgb(0 0 0 / 70%);
+  --glow: 0 0 0 1px rgb(139 92 246 / 30%), 0 12px 40px -12px rgb(99 102 241 / 55%);
+
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Sora', 'Inter', system-ui, sans-serif;
+
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font: 15px/1.5 var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(1100px 600px at 85% -10%, rgb(79 70 229 / 18%), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgb(124 58 237 / 14%), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+#root { min-height: 100vh; }
+
+h1, h2 { margin: 0; color: var(--text-h); font-family: var(--display); letter-spacing: -0.02em; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--violet-soft);
+  outline-offset: 2px;
+}
+
+::selection { background: rgb(139 92 246 / 45%); color: #fff; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: 10px; background: var(--surface-3) padding-box; }
